@@ -1,0 +1,17 @@
+{
+  "name": "code-test-frontend-bastards",
+  "version": "1.0.0",
+  "description": "Node project to check objects according to schemes in JavaScript.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Martijn Cornips <martijn@cornips.nl>"
+}
