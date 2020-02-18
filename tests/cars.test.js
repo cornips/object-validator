@@ -1,7 +1,7 @@
 const validateObject = require('../helpers');
 
 // Set scheme
-const carSchema = {
+const carScheme = {
     brand: 'string',
     type: 'string',
     milage: 'number',
@@ -31,9 +31,9 @@ const carObjF = {
 
 
 test('Validate a valid car object', () => {
-  expect(validateObject(carObj, carSchema)).toBe(true);
+  expect(validateObject(carObj, carScheme)).toBe(true);
 });
 
 test('Validate an invalid car object', () => {
-  expect(validateObject(carObjF, carSchema)).toBe(false);
+  expect(validateObject(carObjF, carScheme)).toBe(false);
 });
