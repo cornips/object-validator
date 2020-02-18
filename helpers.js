@@ -13,12 +13,20 @@ const validateObject = (object, scheme) => {
       return false
     }
 
+
+    // typeof Array is object, so check object isn't Array
+    if (scheme[key] == 'object' && Array.isArray(value)){
+      // An inconsistency was definitely found according to scheme
+      console.error(`${key} is of type array, should be ${scheme[key]}`)
+      return false
+    }
+
     // Check if value is as expected from scheme
     if (typeof value !== scheme[key]){
+
       // typeof Array is object, so check that on first fail
-      if (scheme[key] == 'array' && Array.isArray(value)) {
-        continue;
-      }
+      if (scheme[key] == 'array' && Array.isArray(value))
+        continue
 
       // An inconsistency was definitely found according to scheme
       console.error(`${key} is of type ${typeof value}, should be ${scheme[key]}`)
