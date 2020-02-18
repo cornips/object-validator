@@ -1,7 +1,7 @@
 const validateObject = require('../helpers');
 
 // Set scheme
-const barSchema = {
+const barScheme = {
     name: 'string',
     address: 'string',
     drinks: 'object',
@@ -27,9 +27,9 @@ const barObjF = {
 
 
 test('Validate a valid bar object', () => {
-  expect(validateObject(barObj, barSchema)).toBe(true);
+  expect(validateObject(barObj, barScheme)).toBe(true);
 });
 
 test('Validate an invalid bar object', () => {
-  expect(validateObject(barObjF, barSchema)).toBe(false);
+  expect(validateObject(barObjF, barScheme)).toBe(false);
 });

@@ -1,7 +1,7 @@
 const validateObject = require('../helpers');
 
 // Set scheme
-const personSchema = {
+const personScheme = {
    name: 'string',
    age: 'number',
    siblings: 'array',
@@ -27,9 +27,9 @@ const personObjF = {
 
 
 test('Validate a valid person object', () => {
-  expect(validateObject(personObj, personSchema)).toBe(true);
+  expect(validateObject(personObj, personScheme)).toBe(true);
 });
 
 test('Validate an invalid person object', () => {
-  expect(validateObject(personObjF, personSchema)).toBe(false);
+  expect(validateObject(personObjF, personScheme)).toBe(false);
 });
