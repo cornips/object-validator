@@ -1,14 +1,14 @@
 {
-  "name": "code-test-frontend-bastards",
-  "version": "1.0.0",
+  "name": "object-validator",
   "description": "Node project to check objects according to schemes in JavaScript.",
+  "version": "1.0.0",
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "dependencies": {},
   "devDependencies": {
-    "jest": "^25.1.0"
+    "jest": "^27.2.0"
   },
   "scripts": {
     "test": "jest"
